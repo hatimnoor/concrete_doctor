@@ -87,7 +87,7 @@ h1,h2,h3,h4,h5 { margin: 0; }
     object-position: center;
     animation: kenburns-pan 18s ease-in-out infinite alternate;
     transform-origin: left center;
-    filter: brightness(0.35);
+    filter: brightness(0.45);
 }
 
 @keyframes kenburns-pan {
