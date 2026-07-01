@@ -210,6 +210,24 @@ section { padding: 96px 0; }
 .svc-list--sm li { font-size: 13px; }
 .svc-link { font-size: 13px; font-weight: 700; color: var(--red); transition: color 0.18s; }
 .svc-link:hover { color: var(--red-hover); }
+.svc-card-img {
+    width: calc(100% + 56px);
+    margin: -28px -28px 24px -28px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+.svc-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+    filter: brightness(0.92);
+}
+.svc-card:hover .svc-card-img img {
+    transform: scale(1.04);
+}
 .svc-card--sm { padding: 24px; }
 .svc-card--sm .svc-icon--sm { margin-bottom: 14px; }
 .svc-card--sm h3 { font-size: 16px; margin-bottom: 9px; }
