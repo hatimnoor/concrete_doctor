@@ -390,15 +390,12 @@ section { padding: 96px 0; }
   z-index: 199; box-shadow: 0 8px 32px rgba(0,0,0,0.1);
 }
 .main-nav.open > a { color: var(--text-2); font-size: 16px; }
-
 a:focus-visible, button:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
-
 .nav-dropdown {
   position: relative;
   display: flex;
   align-items: center;
 }
-
 .nav-parent {
   font-size: 14px;
   font-weight: 600;
@@ -407,16 +404,14 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--red); outline-o
   transition: color 0.18s;
   white-space: nowrap;
 }
-
 .nav-parent:hover {
   color: var(--text);
 }
-.nav-parent { cursor: pointer; }
 .dropdown-menu {
   display: none; position: absolute;
-  top: calc(100% + 14px); left: 0;
+  top: calc(100% + 4px); left: 0;
   background: var(--white); border: 1px solid var(--border);
-  border-radius: var(--r); padding: 8px 0;
+  border-radius: var(--r); padding-top: 8px; padding-bottom: 8px;
   min-width: 200px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); z-index: 300;
 }
 .nav-dropdown:hover .dropdown-menu { display: block; }
