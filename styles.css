@@ -409,7 +409,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--red); outline-o
 }
 .dropdown-menu {
   display: none; position: absolute;
-  top: calc(100% + 4px); left: 0;
+  top: calc(100% + 2px); left: 0;
   background: var(--white); border: 1px solid var(--border);
   border-radius: var(--r); padding-top: 8px; padding-bottom: 8px;
   min-width: 200px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); z-index: 300;
@@ -418,6 +418,6 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--red); outline-o
 .dropdown-menu a {
   display: block; padding: 10px 18px;
   font-size: 14px; color: var(--text-2) !important;
-  transition: background 0.15s, color 0.15s;
+  transition: background 0.20s, color 0.20s;
 }
 .dropdown-menu a:hover { background: var(--off-white); color: var(--text) !important; }
