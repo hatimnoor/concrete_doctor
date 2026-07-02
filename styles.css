@@ -393,7 +393,24 @@ section { padding: 96px 0; }
 
 a:focus-visible, button:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
 
-.nav-dropdown { position: relative; }
+.nav-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-parent {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-2);
+  cursor: pointer;
+  transition: color 0.18s;
+  white-space: nowrap;
+}
+
+.nav-parent:hover {
+  color: var(--text);
+}
 .nav-parent { cursor: pointer; }
 .dropdown-menu {
   display: none; position: absolute;
