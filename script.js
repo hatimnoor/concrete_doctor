@@ -98,3 +98,71 @@ updateResult();
 
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// Footer year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Promo popup
+const overlay = document.getElementById('promoOverlay');
+const closeBtn = document.getElementById('promoClose');
+const submitBtn = document.getElementById('promoSubmit');
+
+const dismissed = sessionStorage.getItem('promoDismissed');
+if (!dismissed) {
+  setTimeout(() => { overlay.classList.remove('hidden'); }, 3000);
+}
+
+closeBtn.addEventListener('click', () => {
+  overlay.classList.add('hidden');
+  sessionStorage.setItem('promoDismissed', 'true');
+});
+
+overlay.addEventListener('click', (e) => {
+  if (e.target === overlay) {
+    overlay.classList.add('hidden');
+    sessionStorage.setItem('promoDismissed', 'true');
+  }
+});
+
+submitBtn.addEventListener('click', async () => {
+  const name = document.getElementById('promoName').value.trim();
+  const phone = document.getElementById('promoPhone').value.trim();
+
+  if (!name || !phone) {
+    alert('Please enter your name and phone number.');
+    return;
+  }
+
+  submitBtn.textContent = 'Sending...';
+  submitBtn.disabled = true;
+
+  try {
+    const response = await fetch('https://formspree.io/f/xxxxxxxx', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        name: name,
+        phone: phone,
+        offer: 'July 4th — Free Consultation + 15% Discount',
+        source: 'Popup Form — concretedoctor.com'
+      })
+    });
+
+    if (response.ok) {
+      submitBtn.textContent = '✓ We\'ll be in touch soon!';
+      submitBtn.style.background = '#2a7a2a';
+      setTimeout(() => {
+        overlay.classList.add('hidden');
+        sessionStorage.setItem('promoDismissed', 'true');
+      }, 2500);
+    } else {
+      submitBtn.textContent = 'Something went wrong — try again';
+      submitBtn.style.background = '#a83422';
+      submitBtn.disabled = false;
+    }
+  } catch (error) {
+    submitBtn.textContent = 'Connection error — try again';
+    submitBtn.style.background = '#a83422';
+    submitBtn.disabled = false;
+  }
+});
