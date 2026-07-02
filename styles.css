@@ -392,3 +392,20 @@ section { padding: 96px 0; }
 .main-nav.open > a { color: var(--text-2); font-size: 16px; }
 
 a:focus-visible, button:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+
+.nav-dropdown { position: relative; }
+.nav-parent { cursor: pointer; }
+.dropdown-menu {
+  display: none; position: absolute;
+  top: calc(100% + 14px); left: 0;
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--r); padding: 8px 0;
+  min-width: 200px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); z-index: 300;
+}
+.nav-dropdown:hover .dropdown-menu { display: block; }
+.dropdown-menu a {
+  display: block; padding: 10px 18px;
+  font-size: 14px; color: var(--text-2) !important;
+  transition: background 0.15s, color 0.15s;
+}
+.dropdown-menu a:hover { background: var(--off-white); color: var(--text) !important; }
