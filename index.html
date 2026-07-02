@@ -11,7 +11,38 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+<!-- PROMO POPUP -->
+<div class="promo-overlay" id="promoOverlay">
+  <div class="promo-popup">
+    <button class="promo-close" id="promoClose" aria-label="Close">✕</button>
+    <div class="promo-flag">🇺🇸</div>
+    <div class="promo-badge">LIMITED TIME OFFER</div>
+    <h2 class="promo-title">July 4th Special</h2>
+    <p class="promo-sub">Celebrate Independence Day with a fresh floor</p>
+    <div class="promo-offers">
+      <div class="promo-offer">
+        <span class="offer-icon">🎯</span>
+        <div>
+          <strong>Free Consultation</strong>
+          <span>On-site visit, no strings attached</span>
+        </div>
+      </div>
+      <div class="promo-offer">
+        <span class="offer-icon">🏷️</span>
+        <div>
+          <strong>15% Off Your Project</strong>
+          <span>When you sign up before July 31st</span>
+        </div>
+      </div>
+    </div>
+    <div class="promo-form">
+      <input type="text" class="promo-input" id="promoName" placeholder="Your Name">
+      <input type="tel" class="promo-input" id="promoPhone" placeholder="Phone Number">
+      <button class="promo-btn" id="promoSubmit">Claim My 15% Discount</button>
+    </div>
+    <p class="promo-fine">Offer valid on all new projects signed by July 31, 2025. Cannot be combined with other offers.</p>
+  </div>
+</div>
 <!-- NAV -->
 <header class="site-header" id="siteHeader">
   <div class="wrap header-inner">
